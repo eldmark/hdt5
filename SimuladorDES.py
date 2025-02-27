@@ -20,10 +20,12 @@ def proceso(env, nombre, ram, cpu, instruccion_total, tiempos):
         with cpu.request() as req:
             yield req
             yield env.timeout(1)
-            ejecutadas = min(CPU_SPEED, instruccion_total)
-            instruccion_total -= ejecutadas
-            if instruccion_total > 0:
-                decision = random.randint(1, 2)
+            executed = min(CPU_SPEED, total_instruction)  # Instrucciones ejecutadas en esta unidad de tiempo
+            total_instruction -= executed  # Actualiza las instrucciones restantes
+            
+            # Tiempo de la instrucción - tiempo ejecutado
+            if total_instruction > 0:
+                decision = random.randint(1, 2)  # Decisión aleatoria para simular eventos
                 if decision == 1:
                     yield env.timeout(random.randint(1, 3))
     ram.put(memoria_requerida)
