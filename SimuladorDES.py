@@ -7,7 +7,7 @@ RAM_CAPACITY = 100  # Se puede cambiar según prueba
 CPU_SPEED = 3  # Se puede cambiar según prueba
 CPU_COUNT = 1  # Se puede cambiar según prueba
 PROCESS_COUNT = [25, 50, 100, 150, 200]
-ARRIVAL_INTERVAL = 1  # Se puede cambiar según prueba
+ARRIVAL_INTERVAL = 10  # Se puede cambiar según prueba
 RANDOM_SEED = 10
 
 random.seed(RANDOM_SEED)
@@ -20,12 +20,10 @@ def proceso(env, nombre, ram, cpu, instruccion_total, tiempos):
         with cpu.request() as req:
             yield req
             yield env.timeout(1)
-            executed = min(CPU_SPEED, total_instruction)  # Instrucciones ejecutadas en esta unidad de tiempo
-            total_instruction -= executed  # Actualiza las instrucciones restantes
-            
-            # Tiempo de la instrucción - tiempo ejecutado
-            if total_instruction > 0:
-                decision = random.randint(1, 2)  # Decisión aleatoria para simular eventos
+            ejecutadas = min(CPU_SPEED, instruccion_total)
+            instruccion_total -= ejecutadas
+            if instruccion_total > 0:
+                decision = random.randint(1, 2)
                 if decision == 1:
                     yield env.timeout(random.randint(1, 3))
     ram.put(memoria_requerida)
