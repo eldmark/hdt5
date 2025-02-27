@@ -43,7 +43,7 @@ def process(env, name, ram, cpu, total_instruction, times):
             
             # Tiempo de la instrucción - tiempo ejecutado
             if total_instruction > 0:
-                decision = random.randint(1, 21)  # Decisión aleatoria para simular eventos
+                decision = random.randint(1, 2)  # Decisión aleatoria para simular eventos
                 if decision == 1:
                     yield env.timeout(random.randint(1, 3))  # Simula operación de I/O
                 elif decision == 2:
