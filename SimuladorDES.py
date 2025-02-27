@@ -15,19 +15,39 @@ Descripción: Este archivo contiene la implementación de un simulador de un sis
 '''
 
 # Parámetros de simulación
-RAM_CAPACITY = 100  # Se puede cambiar según prueba
-CPU_SPEED = 3  # Se puede cambiar según prueba
-CPU_COUNT = 1  # Se puede cambiar según prueba
+RAM_CAPACITY = 100   
+CPU_SPEED = 3   
+CPU_COUNT = 1   
 PROCESS_COUNT = [25, 50, 100, 150, 200]
-ARRIVAL_INTERVAL = 10  # Se puede cambiar según prueba
+ARRIVAL_INTERVAL = 10   
 RANDOM_SEED = 10
+
 
 random.seed(RANDOM_SEED)
 
-# Definir proceso
-def proceso(env, nombre, ram, cpu, instruccion_total, tiempos):
-    memoria_requerida = random.randint(1, 10)
-    tiempo_llegada = env.now
+# define process
+def process(env, name, ram, cpu, total_instruction, times):
+    requiredMemory = random.randint(1, 10)
+    arrivalTime = env.now
+    yield ram.get(requiredMemory)
+    #queue of ready
+    with cpu.request() as req:
+        yield req
+        while total_instruction > 0:
+            yield env.timeout(1)
+            executed = min(CPU_SPEED, total_instruction)
+            total_instruction -= executed
+            #time of the instruction - executed time
+            if total_instruction > 0:
+                decision = random.randint(1, 21)
+                if decision == 1:
+                    yield env.timeout(random.randint(1, 3))
+                elif decision == 2:
+                    with cpu.request() as req2:
+                        yield req2 #return to ready
+    #end process
+    ram.put(requiredMemory)
+    times.append(env.now - arrivalTime)
     
 
 # Iniciar simulación
