@@ -11,19 +11,32 @@ Se graficaran los tiempos en los que terminan para poder determinar cual es la m
  1. Python 3.19.9 o superior
 
 ## Graficas
-Graficas Originales
-  1. Gráfica 25 Procesos
-  2. Gráfica 50 Procesos
-  3. Gráfica 100 Procesos
-  4. Gráfica 150 Procesos
-  5. Gráfica 200 procesos
-  6. Tabla promedio de tiempos y Desviación estandar
-Graficas con intervalos de 5
-  1. Gráfica 25 Procesos
-  2. Gráfica 50 Procesos
-  3. Gráfica 100 Procesos
-  4. Gráfica 150 Procesos
-  5. Gráfica 200 Procesos
-  6. Tabla promedio de tiempos y Desviación estandar
+Valores Estándar - Intervalo 10
+![alt text](N_I10.png)
+Valores Estándar - Intervalo 5
+![alt text](N_I5.png)
+Valores Estándar - Intervalo 1
+![alt text](N_I1.png)
+
+200 de Memoria - Intervalo 10
+
+200 de Memoria - Intervalo 5
+
+200 de Memoria - Intervalo 1
+
+
+Velocidad 6 de Procesador - Intervalo 10
+
+Velocidad 6 de Procesador - Intervalo 5
+
+Velocidad 6 de Procesador - Intervalo 1
+
+
+2 Procesadores - Intervalo 10
+
+2 Procesadores - Intervalo 5
+
+2 Procesadores - Intervalo 1
+
 
 ## ¿Cuál es la mejor estrategia para reducir el tiempo promedio de ejecución de los procesos_
