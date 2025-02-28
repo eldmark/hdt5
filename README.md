@@ -10,33 +10,48 @@ Se graficaran los tiempos en los que terminan para poder determinar cual es la m
 ## Requisitos
  1. Python 3.19.9 o superior
 
+## Tablas de Valores
+https://docs.google.com/spreadsheets/d/1Gfg2hg_Z6IBcI0oMsNR6PYcb4vd5LAyb1vGnVOYTfB4/edit?usp=sharing
+
 ## Graficas
 Valores Estándar - Intervalo 10
 ![alt text](N_I10.png)
+
 Valores Estándar - Intervalo 5
 ![alt text](N_I5.png)
+
 Valores Estándar - Intervalo 1
 ![alt text](N_I1.png)
 
+
 200 de Memoria - Intervalo 10
 ![alt text](M200_I10.png)
+
 200 de Memoria - Intervalo 5
 ![alt text](M200_I5.png)
+
 200 de Memoria - Intervalo 1
 ![alt text](M200_I1.png)
 
+
 Velocidad 6 de Procesador - Intervalo 10
 
+
 Velocidad 6 de Procesador - Intervalo 5
+
 
 Velocidad 6 de Procesador - Intervalo 1
 
 
+
 2 Procesadores - Intervalo 10
+
 
 2 Procesadores - Intervalo 5
 
+
 2 Procesadores - Intervalo 1
+
 
 
 ## ¿Cuál es la mejor estrategia para reducir el tiempo promedio de ejecución de los procesos_
