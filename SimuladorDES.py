@@ -2,16 +2,30 @@ import simpy
 import random
 import statistics
 
-# Parámetros de simulación
-RAM_CAPACITY = 100  # Se puede cambiar según prueba
-CPU_SPEED = 3  # Se puede cambiar según prueba
-CPU_COUNT = 1  # Se puede cambiar según prueba
-PROCESS_COUNT = [25, 50, 100, 150, 200]
-ARRIVAL_INTERVAL = 10  # Se puede cambiar según prueba
-RANDOM_SEED = 10
+'''
+Universidad del Valle de Guatemala
+Algoritmos y Estructuras de Datos
+Ing. Douglas Barrios
+Autores: Marcelo Detlefsen, Marco Diaz, Diego Calderón
+Creación: 26/02/2025
+Última modificación: 26/02/2025
+Nombre del Archivo: SimuladorDES.py
+Descripción: Este archivo contiene la implementación de un simulador de un sistema de procesamiento de procesos
+             utilizando el paradigma de simulación de eventos discretos (DES).
+'''
 
+# Parámetros de simulación
+RAM_CAPACITY = 100   # Capacidad total de RAM disponible
+CPU_SPEED = 3        # Velocidad de procesamiento del CPU (instrucciones por unidad de tiempo)
+CPU_COUNT = 1        # Número de CPUs disponibles
+PROCESS_COUNT = [25, 50, 100, 150, 200]  # Lista de números de procesos para diferentes pruebas
+ARRIVAL_INTERVAL = 10   # Intervalo de tiempo entre la llegada de procesos
+RANDOM_SEED = 10    # Semilla para generar números aleatorios reproducibles
+
+# Inicializar generador de números aleatorios
 random.seed(RANDOM_SEED)
 
+# Define el proceso
 def proceso(env, nombre, ram, cpu, instruccion_total, tiempos):
     memoria_requerida = random.randint(1, 10)
     tiempo_llegada = env.now
@@ -29,6 +43,7 @@ def proceso(env, nombre, ram, cpu, instruccion_total, tiempos):
     ram.put(memoria_requerida)
     tiempos.append(env.now - tiempo_llegada)
 
+# Iniciar simulación
 def correr_simulacion(num_procesos, intervalo, ram_capacity, cpu_speed, cpu_count):
     tiempos = []
     env = simpy.Environment()
