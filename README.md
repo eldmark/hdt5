@@ -19,11 +19,11 @@ Valores Estándar - Intervalo 1
 ![alt text](N_I1.png)
 
 200 de Memoria - Intervalo 10
-
+![alt text](M200_I10.png)
 200 de Memoria - Intervalo 5
-
+![alt text](M200_I5.png)
 200 de Memoria - Intervalo 1
-
+![alt text](M200_I1.png)
 
 Velocidad 6 de Procesador - Intervalo 10
 
