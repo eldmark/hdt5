@@ -35,13 +35,13 @@ Valores Estándar - Intervalo 1
 
 
 Velocidad 6 de Procesador - Intervalo 10
-
+![alt text](P6_I10.png)
 
 Velocidad 6 de Procesador - Intervalo 5
-
+![alt text](P6_I5.png)
 
 Velocidad 6 de Procesador - Intervalo 1
-
+![alt text](P6_I1.png)
 
 
 2 Procesadores - Intervalo 10
