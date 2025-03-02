@@ -54,4 +54,4 @@ Velocidad 6 de Procesador - Intervalo 1
 
 
 
-## ¿Cuál es la mejor estrategia para reducir el tiempo promedio de ejecución de los procesos_
+## ¿Cuál es la mejor estrategia para reducir el tiempo promedio de ejecución de los procesos?
