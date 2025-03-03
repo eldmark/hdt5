@@ -57,3 +57,6 @@ Velocidad 6 de Procesador - Intervalo 1
 
 
 ## ¿Cuál es la mejor estrategia para reducir el tiempo promedio de ejecución de los procesos?
+- Según las pruebas, el rendimiento varía según la cantidad de tareas asignadas. En primer lugar, la memoria RAM no influye significativamente en el desempeño si el procesador es deficiente, ya que, aunque haya suficiente memoria, los procesos simplemente se acumulan sin poder ser ejecutados eficientemente.  
+
+Por otro lado, mejorar la velocidad del procesador genera una diferencia notable, llegando en algunos casos a triplicar la eficiencia cuando se manejan pocos datos y el tiempo de transmisión de información es moderado. En contraste, el uso de un procesador doble implementa una estrategia de "divide y vencerás", lo que le permite gestionar grandes volúmenes de datos en un corto periodo de tiempo. Sin embargo, su rendimiento resulta mediocre en comparación con las pruebas en las que se optó por aumentar la velocidad del procesador.
