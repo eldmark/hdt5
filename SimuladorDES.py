@@ -17,9 +17,9 @@ Descripción: Este archivo contiene la implementación de un simulador de un sis
 # Parámetros de simulación
 RAM_CAPACITY = 100   # Capacidad total de RAM disponible
 CPU_SPEED = 3        # Velocidad de procesamiento del CPU (instrucciones por unidad de tiempo)
-CPU_COUNT = 1        # Número de CPUs disponibles
+CPU_COUNT = 2        # Número de CPUs disponibles
 PROCESS_COUNT = [25, 50, 100, 150, 200]  # Lista de números de procesos para diferentes pruebas
-ARRIVAL_INTERVAL = 10   # Intervalo de tiempo entre la llegada de procesos
+ARRIVAL_INTERVAL = 1 # Intervalo de tiempo entre la llegada de procesos
 RANDOM_SEED = 10    # Semilla para generar números aleatorios reproducibles
 
 # Inicializar generador de números aleatorios
@@ -67,10 +67,14 @@ def correr_simulacion(num_procesos, intervalo, ram_capacity, cpu_speed, cpu_coun
     return promedio, desviacion
 
 # Ejecutar simulación para un caso específico
-def ejecutar_prueba():
-    proceso = PROCESS_COUNT[0]
+def ejecutar_prueba(n):
+    proceso = PROCESS_COUNT[n]
     promedio, desviacion = correr_simulacion(proceso, ARRIVAL_INTERVAL, RAM_CAPACITY, CPU_SPEED, CPU_COUNT)
     print(f"Procesos: {proceso}, Intervalo: {ARRIVAL_INTERVAL}, RAM: {RAM_CAPACITY}, CPU Speed: {CPU_SPEED}, CPUs: {CPU_COUNT}\nTiempo promedio: {promedio:.2f}, Desviación estándar: {desviacion:.2f}")
 
 # Llamar a la función para ejecutar la prueba
-ejecutar_prueba()
+ejecutar_prueba(0)
+ejecutar_prueba(1)
+ejecutar_prueba(2)
+ejecutar_prueba(3)
+ejecutar_prueba(4)

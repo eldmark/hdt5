@@ -45,12 +45,14 @@ Velocidad 6 de Procesador - Intervalo 1
 
 
 2 Procesadores - Intervalo 10
-
+![alt text](PvsPI1.png)
 
 2 Procesadores - Intervalo 5
+![alt text](PvsPI5.png)
 
 
 2 Procesadores - Intervalo 1
+![alt text](PvsPI10.png)
 
 
 
